@@ -1,17 +1,18 @@
 :root{
-  --bg: #eef6ef;            /* soft light green */
+  /* Warm cream + upscale navy/amber accents */
+  --bg: #f7f1e8;	     /* warm cream / linen */
   --card: #ffffff;
-  --ink: #123524;           /* hunter green text */
-  --muted: #2f5b46;
+  --ink: #1f2a2e;           /* deep slate (readable) */
+  --muted: #5b6770;         /* softer slate */
 
-  --brand: #0b2f5b;         /* dark blue accents */
-  --brand2: #082546;
+  --brand: #1b4f72;         /* classic navy-blue */
+  --brand2: #133b54;        /* deeper navy */
 
-  --accent: #b08d57;        /* warm “boutique gold” */
-  --accent2: #8f6f40;
+  --accent: #c88a2f;        /* warm amber */
+  --accent2: #9c6a1e;
 
-  --line: rgba(18,53,36,.14);
-  --shadow: 0 20px 70px rgba(18,53,36,.12);
+  --line: rgba(31,42,46,.12);
+  --shadow: 0 20px 70px rgba(31,42,46,.10);
   --radius: 20px;
 }
 
@@ -44,7 +45,7 @@ a{ color: inherit; text-decoration: none; }
 
 .site-header{
   position: sticky; top: 0; z-index: 50;
-  background: rgba(238,246,239,.86);
+  background: rgba(247, 241, 232, 0.92);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
 }
@@ -105,6 +106,49 @@ a{ color: inherit; text-decoration: none; }
   font-weight: 650;
   box-shadow: 0 12px 28px rgba(11,47,91,.22);
 }
+/* Truist pill */
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  padding: .4rem .75rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.78);
+  color: var(--muted);
+  font-size: .86rem;
+  font-weight: 650;
+  margin: .25rem 0 .75rem 0;
+}
+
+/* Ghost button */
+.btn.ghost{
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  box-shadow: none;
+}
+.btn.ghost:hover{
+  background: rgba(0,0,0,.04);
+}
+
+/* Map */
+.map-wrap{
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: var(--card);
+}
+.map-embed{
+  width: 100%;
+  height: 420px;
+  border: 0;
+  display:block;
+}
+@media (max-width: 900px){
+  .map-embed{ height: 360px; }
+}
 
 /* NAV inquiry button = boutique standout */
 .nav .btn.small{
@@ -154,13 +198,14 @@ a{ color: inherit; text-decoration: none; }
 
 .hero{ position:relative; min-height: 78vh; display:grid; align-items:center; }
 .hero-media{
-  position:absolute; inset:0;
+  position:absolute;
+  inset:0;
   background:
-    radial-gradient(circle at 20% 10%, rgba(255,255,255,.20), transparent 45%),
-    linear-gradient(0deg, rgba(11,47,91,.58), rgba(18,53,36,.22)),
+    linear-gradient(0deg, rgba(255,255,255,.15), rgba(255,255,255,.05)),
     url("images/hero.jpg");
   background-size: cover;
   background-position: center;
+  filter: none;
 }
 .hero-content{ position:relative; padding: 3.5rem 0; }
 .hero-card{
@@ -296,7 +341,7 @@ textarea{ resize: vertical; }
   align-items:center;
   justify-content:center;
   padding: 1.25rem;
-  z-index: 200;
+  z-index: 9999;
 }
 .lightbox.open{ display:flex; }
 .lightbox img{
@@ -305,19 +350,30 @@ textarea{ resize: vertical; }
   border-radius: 18px;
   border: 1px solid rgba(255,255,255,.18);
 }
-.lightbox-close{
+.lightbox .close{
   position: fixed;
   top: 18px;
   right: 18px;
-  width: 44px;
-  height: 44px;
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,.2);
-  background: rgba(255,255,255,.12);
+  font-size: 32px;
   color: #fff;
-  font-size: 28px;
   cursor:pointer;
 }
+.lightbox .nav{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.lightbox .prev{ left: 20px; }
+.lightbox .next{ right: 20px; }
+
+
 .sr-only{
   position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0;
 }
@@ -345,3 +401,47 @@ textarea{ resize: vertical; }
   }
   .nav-links.open{ display:flex; }
 }
+
+/* Ghost button (outline) */
+.btn.ghost{
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  box-shadow: none;
+}
+.btn.ghost:hover{
+  background: rgba(31,42,46,.04);
+}
+
+/* Truist callout pill */
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  padding: .4rem .7rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.75);
+  color: var(--muted);
+  font-size: .86rem;
+  font-weight: 600;
+}
+
+/* Map embed */
+.map-wrap{
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: var(--card);
+}
+.map-embed{
+  width: 100%;
+  height: 420px;
+  border: 0;
+  display:block;
+}
+@media (max-width: 900px){
+  .map-embed{ height: 360px; }
+}
+

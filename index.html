@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Carmel Estates House | Executive Rental in Charlotte, NC</title>
   <meta name="description" content="Elegant 4 bed, 3.5 bath furnished corporate rental in South Charlotte on a wooded lot. Designer furniture and luxury bedding. Ideal for SouthPark, Uptown, and Ballantyne commuters." />
-  <meta name="theme-color" content="#0f2a24" />
+  <meta name="theme-color" content="#1b4f72" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,11 +50,17 @@
       <div class="container hero-content">
         <div class="hero-card">
           <p class="eyebrow">Elegant • Private • Move-in Ready</p>
-          <h1>Furnished Executive rental in South Charlotte</h1>
-          <p class="lead">
-            A <strong>4 bedroom, 3.5 bathroom</strong> home on a <strong>large wooded lot</strong> in one of South Charlotte’s premier neighborhoods.
-           
-          </p>
+
+<p class="pill" aria-label="Truist Championship proximity">
+  Available for the Truist Championship • 4.5 miles • ~10 min to Quail Hollow
+</p>
+
+<h1>Furnished executive rental in South Charlotte</h1>
+
+<p class="lead">
+  A <strong>4 bedroom, 3.5 bathroom</strong> home on a <strong>large wooded lot</strong> in one of South Charlotte’s premier neighborhoods.
+</p>
+         
 
           <div class="hero-badges" aria-label="Key facts">
             <div class="badge"><span class="badge-top">4</span><span class="badge-bottom">Bedrooms</span></div>
@@ -65,7 +71,7 @@
 
           <div class="hero-cta">
             <a class="btn" href="#contact">Request Availability</a>
-            <a class="btn ghost" href="#gallery">View Photos</a>
+            <a class="btn" href="#gallery">View Photos</a>
           </div>
 
           <p class="micro">
@@ -174,41 +180,64 @@
       </div>
 
       <!-- Lightbox -->
-      <div class="lightbox" id="lightbox" aria-hidden="true">
-        <button class="lightbox-close" type="button" aria-label="Close photo">&times;</button>
-        <img id="lightboxImg" alt="" />
-      </div>
+<div class="lightbox" id="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-img" id="lightbox-img">
+  <button class="nav prev">&#10094;</button>
+  <button class="nav next">&#10095;</button>
+</div>
     </section>
 
     <!-- LOCATION -->
     <section id="location" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Location</h2>
-          <p>Convenient for work, errands, and everyday life in South Charlotte.</p>
+  <div class="container">
+    <div class="section-head">
+      <h2>Location</h2>
+      <p>
+        Convenient for work, errands, and everyday life in South Charlotte —
+        <strong>4.5 miles (~10 minutes)</strong> from <strong>Quail Hollow Club</strong> for the Truist Championship.
+      </p>
+    </div>
+
+    <div class="grid-2">
+      <article class="card">
+        <h3>Nearby</h3>
+        <ul class="list">
+          <li><strong>Quail Hollow Club:</strong> 4.5 miles • ~10 min</li>
+          <li><strong>SouthPark</strong></li>
+          <li><strong>Uptown</strong></li>
+          <li><strong>Ballantyne</strong></li>
+          <li>Shopping, library, and recreation spaces</li>
+        </ul>
+
+        <div class="callout">
+          <p class="callout-title">Truist Championship stays</p>
+          <p class="micro">Ask about tournament-week availability and minimum stay requirements.</p>
+        </div>
+      </article>
+
+      <article class="card soft">
+        <h3>Map: groceries & greenways</h3>
+        <p class="micro">Explore nearby grocery stores and greenway access points.</p>
+
+        <div class="map-wrap spaced-top">
+          <!-- Replace the src with your Google My Maps embed link -->
+     <iframe
+  class="map-embed"
+  src="https://www.google.com/maps/d/u/0/embed?mid=1B7ldla39PGjevM-ovPmra11lJESGv1c&ehbc=2E312F&noprof=1"
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade"
+  aria-label="Map showing nearby grocery stores, parks and library"
+></iframe>
         </div>
 
-        <div class="grid-2">
-          <article class="card">
-            <h3>Nearby</h3>
-            <ul class="list">
-              <li><strong>SouthPark</strong></li>
-              <li><strong>Uptown</strong></li>
-              <li><strong>Ballantyne</strong></li>
-              <li>Shopping, library, and recreation spaces</li>
-            </ul>
-          </article>
-
-          <article class="card soft">
-            <h3>About management</h3>
-            <p class="lead-small"><strong>Erika Templeton</strong></p>
-            <p class="micro">Property Manager</p>
-            <p class="micro"><strong>Crownstone Properties, LLC</strong></p>
-          </article>
-        </div>
-      </div>
-    </section>
-
+        <p class="micro spaced-top">
+          Tip: In Google My Maps, make separate layers for <strong>Grocery</strong> and <strong>Greenways</strong> so guests can toggle them on/off.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
     <!-- CONTACT (Professional form that submits on the website) -->
     <section id="contact" class="section alt">
       <div class="container">
